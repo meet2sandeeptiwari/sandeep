@@ -5,6 +5,11 @@ data={
 }
 
 http.createServer((req,resp)=>{
-    resp.write("anil sidhu\n");
+    resp.write("sandeep kumar tiwari\n");
     resp.end(JSON.stringify(data));
 }).listen(8000);
+
+http.createServer((req,resp)=>{
+    resp.write("sandeep\n");
+    resp.end(JSON.stringify(data));
+}).listen(8001);
