@@ -16,7 +16,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon response.js"
+    "start": "nodemon simpleAPI.js"
   },
   "dependencies": {
     "colors": "^1.4.0",
