@@ -36,10 +36,11 @@ fs.readFile("text/peter.txt", "utf-8", (error, data)=>{
 
 
 //Node API
+console.time("1");
 setTimeout(() => {
     console.log("timeout 0 second")
 }, 0);
-
+console.time("1");
 
 console.log("end script1");
 
