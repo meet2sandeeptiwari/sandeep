@@ -15,8 +15,8 @@
   "type": "commonjs",
   "main": "app.js",
   "scripts": {
-    "debug": "nodemon --inspect web.js",
-    "start": "nodemon request.js"
+    "debug": "nodemon --inspect form.js",
+    "start": "nodemon form.js port 3200"
   },
   "dependencies": {
     "colors": "^1.4.0",
