@@ -62,32 +62,32 @@ http
             let formData = querystring.parse(rowData);
             let objdata = JSON.stringify(formData);
             console.log(objdata);
-            //   fs.writeFile("html/submitpage.html", objdata, (err) => {
-            //     if (err) {
-            //       console.log(err);
-            //       return resp.end("error");
-            //     }
-            //     resp.end("saved succcessfully");
-            //   });
-            //   resp.end(`
-            //             <h1>Form Submitted</h1>
-            //             <h3>Name : ${formData.name}</h3>
-            //             <h3>Email : ${formData.email}</h3>
-            //     `);
-            // });
 
             fs.writeFile("html/submitpage.html", objdata, (err) => {
               if (err) {
                 console.log(err);
-                return resp.end("error");
+                return resp.end("internal server error");
               } else {
                 resp.end(`
-                      <h1>Form Submitted</h1>
-                      <h3>Name : ${formData.name}</h3>
-                      <h3>Email : ${formData.email}</h3>
-              `);
+                        <h1>Form Submitted</h1>
+                        <h3>Name : ${formData.name}</h3>
+                        <h3>Email : ${formData.email}</h3>
+                `);
               }
             });
+
+            // fs.writeFile("html/submitpage.html", objdata, (err) => {
+            //   if (err) {
+            //     console.log(err);
+            //     return resp.end("error");
+            //   } else {
+            //     resp.end(`
+            //           <h1>Form Submitted</h1>
+            //           <h3>Name : ${formData.name}</h3>
+            //           <h3>Email : ${formData.email}</h3>
+            //   `);
+            //   }
+            // });
           });
         }
       });
