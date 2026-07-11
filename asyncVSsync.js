@@ -18,6 +18,12 @@
 
 const fs=require("fs");
 
+//Node API
+setTimeout(() => {
+    console.log("timeout 3 second")
+}, 3000);
+
+
 //Asynchronous Operation Example
 console.log("start script");
 fs.readFile("text/peter.txt", "utf-8", (error, data)=>{
@@ -29,10 +35,18 @@ fs.readFile("text/peter.txt", "utf-8", (error, data)=>{
 });
 
 
+//Node API
+setTimeout(() => {
+    console.log("timeout 0 second")
+}, 0);
+
+
+console.log("end script1");
+
 //Synchronous operation Example
 const data=fs.readFileSync("text/peter.txt", "utf-8");
 console.log(data+" welcome to the Blocking operatuion");
 
 
-
 console.log("end script");
+console.log(process.env.UV_THREADPOOL_SIZE);
